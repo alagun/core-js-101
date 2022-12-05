@@ -266,8 +266,8 @@ function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+function getCardId(value) {
+  return 'A234567891JQK'.indexOf(value[0]) + '♣♦♥♠'.indexOf(value.length === 3 ? value[2] : value[1]) * 13;
 }
 
 module.exports = {
